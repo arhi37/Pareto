@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>623</width>
+    <width>679</width>
     <height>392</height>
    </rect>
   </property>
@@ -51,7 +51,7 @@
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="tickPosition">
-            <enum>QSlider::TicksBothSides</enum>
+            <enum>QSlider::NoTicks</enum>
            </property>
            <property name="tickInterval">
             <number>0</number>
@@ -284,7 +284,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>623</width>
+     <width>679</width>
      <height>18</height>
     </rect>
    </property>
@@ -293,6 +293,7 @@
      <string>Файл</string>
     </property>
     <addaction name="action_Open"/>
+    <addaction name="action_ExportTxt"/>
     <addaction name="separator"/>
     <addaction name="action_Exit"/>
    </widget>
@@ -313,6 +314,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_ExportTxt">
+   <property name="text">
+    <string>Экспорт..</string>
    </property>
   </action>
  </widget>

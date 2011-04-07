@@ -218,3 +218,19 @@ void MainWindow::on_pushButtonRun_clicked()
 
 	}while(animRun);
 }
+
+void MainWindow::on_action_ExportTxt_triggered()
+{
+	QString str=QFileDialog::getSaveFileName(this, tr("Сохранить в.."), dirStr, "*.txt");
+
+	if(str.isEmpty())return;
+
+	QFile file(str);
+	if(!file.open(QIODevice::WriteOnly))return;
+	QTextStream out(&file);
+
+	for(int i=0;i<paretoSize;i++)
+		out<<paretoX[i]<<'\t'<<paretoY[i]<<'\n';
+
+	file.close();
+}

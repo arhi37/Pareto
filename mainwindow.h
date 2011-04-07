@@ -53,6 +53,8 @@ private slots:
 
 	void on_pushButtonRun_clicked();
 
+	void on_action_ExportTxt_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
