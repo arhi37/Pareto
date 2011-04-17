@@ -109,12 +109,14 @@ void MainWindow::on_sliderPos_valueChanged(int value)
 		return;
 	}
 
+	lastPos=paretoSize;
+
 	if(!getPareto(paretoId, paretoX, paretoY, paretoSize)){
 		paretoSize=0;
 		return;
 	}
 
-	lastPos=paretoSize;
+
 
 	ui->doubleSpinBoxMaxSearch->setRange(paretoX[0], paretoX[paretoSize-1]);
 	ui->doubleSpinBoxMaxUse->setRange(paretoX[0], paretoX[paretoSize-1]);
